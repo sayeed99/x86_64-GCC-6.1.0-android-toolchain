@@ -1,0 +1,20 @@
+#!/bin/bash
+clear
+echo "Setting up toolchain for use"
+cd libexec/gcc/x86_64-linux-gnu/6.1.0
+echo "unziping cc1"
+unzip cc1.zip
+echo "unziping cc1plus"
+unzip cc1plus.zip
+echo "unziping lto1"
+unzip lto1.zip
+echo "removing cc1.zip cc1plus.zip and lto1.zip"
+rm cc1.zip cc1plus.zip lto1.zip
+echo "all done"
+echo " "
+echo "use this export commands now"
+echo "export ARCH=x86_64"
+echo "export CCOMPILE=$CROSS_COMPILE"
+echo "export CROSS_COMPILE=x86_64-linux-android-"
+echo "CROSS_COMPILE has been changed so please pay notice to that."
+echo "Happy compiling :) "
